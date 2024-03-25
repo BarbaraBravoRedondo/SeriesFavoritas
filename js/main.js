@@ -72,6 +72,33 @@ function handleClickBtn(event) {
   event.preventDefault();
   getSeries();
 }
+// Llama a renderInitialSeries al cargar la página para mostrar una lista de series automáticamente
+document.addEventListener('DOMContentLoaded', function () {
+  renderInitialSeries();
+});
+
+function renderInitialSeries() {
+  const alphabet = 'abc';
+  let seriesPromises = [];
+
+  // Genera las promesas para obtener las series de la API para cada letra del alfabeto
+  for (const letter of alphabet) {
+    seriesPromises.push(fetch(`${url}${letter}`).then((response) => response.json()));
+  }
+
+  // Ejecuta todas las promesas de manera paralela
+  Promise.all(seriesPromises)
+    .then((allSeries) => {
+      // Concatena todas las series en una sola lista
+      seriesList = allSeries.flat();
+      renderSerieList();
+      
+    })
+    .catch((error) => {
+      console.error('Error fetching series:', error);
+    });
+}
+
 
 function renderFavorite(favSerie) {
   let html = '';
@@ -84,7 +111,7 @@ function renderFavorite(favSerie) {
   }" alt="${favSerie.show.name}" title="${favSerie.show.name}" />`;
 
   html += `<h2>${favSerie.show.name}</h2>`;
-  html += `<span class="js-bin "><img class="bin" src="./images/basura.png" alt="Borrar" class="binBag"></span>`;
+  html += `<span class="js-bin "><img class="bin" src="./images/cerca.png" alt="Borrar" class="binBag"></span>`;
   html += `</article>`;
   return html;
 }

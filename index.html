@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="./css/main.css" />
  
 
-    <title>Buscador de Series TV</title>
+    <title>POP UP POPCORN</title>
   </head>
   <body>
     <header>
-      <h1>Buscador de series:</h1>
+      <h1>POP UP POPCORN</h1>
+      <P class="intro">Encuentra tus series y añadelas a favoritos</P>
 
       <form class="js-form-series form" action="">
         <input
@@ -18,19 +19,19 @@
           type="text"
           name="search"
           id="search"
-          placeholder="Ej:Barbie"
+        
           
         />
-        <button class="js-btn-src btn">Buscar</button>
+        <button class="js-btn-src btn"><img class="loupe" src="images/lupa.png" alt="Buscar"></button>
      
       </form>
     </header>
     <main class="bigContainer">
       <div class="js-box-series favContainer">
-        <h2 class="titleFav">Mis series favoritas:</h2>
+        <h2 class="titleFav">MY LIST</h2>
         <div class="js-favorite-series favBox"></div>
         <button class="js-resetBtn  btn" type="button">
-          Borrar Favoritos
+   <img  class="binAll" src="images/basura.png" alt="bin it">
         </button>
       </div>
       <div class="js-results-series container">

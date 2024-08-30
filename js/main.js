@@ -127,9 +127,10 @@ function handleClickSerie(event) {
     favoritesList.splice(positionFav, 1);
     event.currentTarget.classList.remove('mark');
     event.currentTarget.classList.add('minibox');
-  }
-  renderFavoritesList();
+  } 
   localStorage.setItem('favorites', JSON.stringify(favoritesList));
+  renderFavoritesList();
+ 
   toggleFavoritesPopup();
 }
 

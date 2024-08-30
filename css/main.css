@@ -28,12 +28,13 @@ header {
   word-spacing: 1.5px;
   font-weight: bold;
   line-height: 20px;
-  height: 30vh;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 10%;
   border: 1px rgb(250, 207, 207, 0.8) solid; 
   box-shadow: 0 0 15px rgba(249, 245, 249, 0.9);
   animation: border-glow 1s infinite alternate;
@@ -86,13 +87,14 @@ form {
   display: flex;
   align-items: center;
   gap: 3px;
-  margin-bottom: 1rem;
+  margin:0.8rem auto 0.8rem;
 }
 
 .inputBox {
   border: solid white 1px;
   height: 80%;
-  padding: 5px;
+  padding: 10px;
+
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 20px;
@@ -105,13 +107,13 @@ form {
   padding: 2px;
   font-family: 'Pacifico', cursive;
   border: rgb(237, 151, 194) solid 2px;
-  cursor: grab;
+  cursor: pointer;
   width: 1.6rem;
 }
 
 .btn:hover {
-  background: pink;
-  color: black;
+  background: rgb(220, 202, 209);
+  color: rgb(98, 18, 18);
 }
 
 .loupe {
@@ -135,43 +137,72 @@ form {
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
+}
+.mark h2{
+  font-size: large;
+  padding: 5px;
+
+}
+.minibox h2{
+  font-size: large;    padding: 5px;;
+}
 .mark,
 .minibox {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(248, 240, 240);
+    overflow: hidden;
+
+  text-overflow:clip;
+  background-color: rgb(244, 211, 247);
   color: rgba(221, 53, 143, 0.904);
-  width: 100px;
-  padding: 15px;
+  width: 150px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
+  text-align:inherit ;
   font-size: 0.5rem;
-  gap: 5px;
-  height: 145px;
-  text-overflow: clip;
-  overflow: hidden;
+  gap: 10px;
+  height:190px;
+
+
+  
 }
 
-.minibox {
-  background-color: rgb(246, 204, 246, 0.5);
-  color: black;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+.minibox { 
+  z-index: 10;
+  background-color: rgb(246, 204, 246, 0.4);
+  color: rgb(9, 8, 8,0.9);
+
 }
 .minibox:hover {
-  background-color: black;
+  background-color: rgba(50, 49, 49, 0.6);
   color: azure;
-  transform: scale(1.15);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  
+  overflow: visible;
+  height: max-content;
+  width: 150px;
+  transform: scale(1.15);
+
+
+}
+.mark:hover{
+
+
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  margin:10px;
+  overflow: visible;
+  height: max-content; 
+
 }
 
 .imgSrc {
   border: solid 1px black;
-  width: 70px;
-  height: 90px;
+  width: 100px;
+  height: 110px;
 }
 
 .favorites-popup {
@@ -181,7 +212,7 @@ form {
   right: 0;
   width: 300px;
   height: 100%;
-  background: rgb(240, 242, 244, 0.9);
+  background: rgba(250, 250, 250, 0.9);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
   padding: 20px;
@@ -195,8 +226,15 @@ form {
 }
 
 .favorites-popup.show {
+ 
+  justify-content: center;
   display: block;
-  transform: translateX(0);
+  transform: translateX(20%);
+ 
+}
+.show h2{
+  display: flex;
+  text-align: center;
 }
 
 .empty-message {
@@ -205,22 +243,50 @@ form {
   font-size: 1.2rem;
   color: rgb(7, 7, 7);
   margin-top: 20px;
+  width:80%
 }
 
-.js-resetBtn .binAll {
-  width: 20px;
-  height: 20px;
+.binAll {
+
+  width: 1.6rem;
+  height: 1.6rem;
+ 
+  
 }
 
 .close-popup {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
+position: absolute;
+top:5px;
+left:10px;
+  
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: red;
+color:none;
+  background-color: none;
+
+}
+.favContainer{
+  margin-top:10%;}
+
+ .btnBin{
+  margin-left:30%;
+  border:2px solid black;
+  padding:5%;
+  border-radius:50%;
+ }
+ 
+
+.favContainer h2{
+  padding-left: 20%;
+}
+.fabList{
+  margin-top:10%;
+  padding-left: 12%;
+}
+.fabList img{
+  height: 100%;
+  margin-top:5%
 }
 
 .favBox {
@@ -231,19 +297,40 @@ form {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 70%;
+
 }
 
-.favBox .delete-btn {
+.delete-btn {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  background: none;
-  border: none;
-  font-size: 18px;
+  z-index: 100;
+  top: 0px;
+  right: 3px;
+  margin:3px;
+
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding:5px;
+  font-size: 3em;
   color: red;
   cursor: pointer;
 }
 
 .favBox .delete-btn:hover {
-  color: darkred;
+  color: rgb(240, 218, 218);
+  background-color: rgb(255, 48, 48);
+}
+.favorites-icon{
+  position:fixed;
+  top:130px;
+  right: -9px;
+  border:2px solid  rgb(255, 17, 57);
+  border-radius: 50%;
+  height: max-content;
+  width: max-content;
+  font-size: 2.5rem;
+  padding: 0.1em;
+  background-color: #f9d8f2;
+  z-index: 200,
+  
 }

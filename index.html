@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>POP UP POPCORN</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>POP UP POPCORN</h1>
-        <p class="intro">Encuentra tus series y añadelas a favoritos</p>
+      <h1>POP UP POPCORN</h1>
+      <p class="intro">Encuentra tus series y añadelas a favoritos</p>
 
-        <form class="js-form-series form" action="">
-            <input class="js-input-serie inputBox" type="text" name="search" id="search">
-            <button class="js-btn-src btn"><img class="loupe" src="images/lupa.png" alt="Buscar"></button>
-        </form>
-        <button class="favorites-icon">❤️</button>
+      <form class="js-form-series form" action="">
+        <input
+          class="js-input-serie inputBox"
+          type="text"
+          name="search"
+          id="search"
+        />
+        <button class="js-btn-src btn">
+          <img class="loupe" src="images/lupa.png" alt="Buscar" />
+        </button>
+      </form>
+      <button class="favorites-icon">❤️</button>
     </header>
     <main class="bigContainer">
-        <div class="js-results-series container">
-            <p class="js-errorMsg msg"></p>
-        </div>
+      <div class="js-results-series container">
+        <p class="js-errorMsg msg"></p>
+      </div>
     </main>
 
-  
     <div class="favorites-popup">
-        <button class="close-popup">✖️</button>
+      <button class="close-popup">✖️</button>
+      <div class="favContainer">
         <h2>MY LIST</h2>
- 
+
         <div class="empty-message">Añade aquí tus series favoritas</div>
-        <div class="js-favorite-series fabList"></div>
-        <button class="js-resetBtn btn" type="button">
-            <img class="binAll" src="images/basura.png" alt="Clear All">
+        <div class="js-favorite-series fabList" ></div>
+        <button class="js-resetBtn btnBin" type="button">
+          <img class="binAll" src="images/basura.png" alt="Clear All" title="Limpiar Lista" />
         </button>
+      </div>
     </div>
 
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>

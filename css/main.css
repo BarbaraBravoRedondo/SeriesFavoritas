@@ -18,16 +18,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+ 
+
 }
 
 header {
-  position: relative;
-  font-family: 'Pacifico', cursive;
+  position: relative; font-family: 'Bebas Neue', sans-serif;
+
   font-size: 1.5rem;
   letter-spacing: 3px;
   word-spacing: 1.5px;
-  font-weight: bold;
-  line-height: 20px;
+  font-weight: bolder;
+  line-height: 40px;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -35,7 +37,7 @@ header {
   align-items: center;
   text-align: center;
   gap: 10%;
-  border: 1px rgb(250, 207, 207, 0.8) solid; 
+  border: 1px rgb(250, 207, 207, 0.8) solid;
   box-shadow: 0 0 15px rgba(249, 245, 249, 0.9);
   animation: border-glow 1s infinite alternate;
   border-radius: 7px;
@@ -45,6 +47,11 @@ header p {
   background: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
   margin: 3px 20px 0px 20px;
+  padding: 1%;
+  line-height: 20px;
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @keyframes border-glow {
@@ -66,8 +73,8 @@ header p {
 
 main {
   height: max-content;
-  padding: 20px;
-  width: 90vw;
+  padding: 10px;
+  /* width: 95vw; */
 }
 
 h1 {
@@ -87,14 +94,14 @@ form {
   display: flex;
   align-items: center;
   gap: 3px;
-  margin:0.8rem auto 0.8rem;
+  margin: 0.8rem auto 0.8rem;
 }
 
 .inputBox {
   border: solid white 1px;
   height: 80%;
   padding: 10px;
-
+  width: 60vw;
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 20px;
@@ -102,13 +109,15 @@ form {
 
 .btn {
   font-size: 0.8rem;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   background-color: white;
-  padding: 2px;
+  border: none;
+  padding: 5px;
   font-family: 'Pacifico', cursive;
-  border: rgb(237, 151, 194) solid 2px;
+  /* border: rgb(237, 151, 194) solid 2px; */
   cursor: pointer;
-  width: 1.6rem;
+  width: max-content;
+  transform: translateX(-150%);
 }
 
 .btn:hover {
@@ -117,7 +126,7 @@ form {
 }
 
 .loupe {
-  width: 10px;
+  width: 18px;
 }
 .bigContainer {
   width: 100vw;
@@ -125,6 +134,7 @@ form {
   justify-content: center;
 }
 .container {
+
   margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -135,58 +145,51 @@ form {
   justify-content: center;
   width: 97vw;
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  
 }
-.mark h2{
+.mark h2 {
   font-size: large;
   padding: 5px;
-
 }
-.minibox h2{
-  font-size: large;    padding: 5px;;
+.minibox h2 {
+  font-size: large;
+  padding: 5px;
 }
 .mark,
-.minibox {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
+.minibox {  font-family: "Patua One", serif;
+  font-weight: 600;
+  
+  overflow: hidden;
 
-  text-overflow:clip;
+  text-overflow: clip;
   background-color: rgb(244, 211, 247);
   color: rgba(221, 53, 143, 0.904);
-  width: 150px;
+  width: 120px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align:inherit ;
+  text-align: inherit;
   font-size: 0.5rem;
   gap: 10px;
-  height:190px;
-
-
-  
+  height: 200px;
 }
 
-.minibox { 
+.minibox {
   z-index: 10;
   background-color: rgb(246, 204, 246, 0.4);
-  color: rgb(9, 8, 8,0.9);
-
+  color: rgb(9, 8, 8, 0.9);
 }
 .minibox:hover {
   background-color: rgba(50, 49, 49, 0.6);
   color: azure;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  margin:20px;
+  margin: 9px;
   overflow: visible;
   height: max-content;
-  width: 150px;
+  width: 160px;
   transform: scale(1.15);
-
-
 }
 /* .mark:hover{
 
@@ -210,7 +213,7 @@ form {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 100vw;
   height: 100%;
   background: rgba(250, 250, 250, 0.9);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -226,68 +229,79 @@ form {
 }
 
 .favorites-popup.show {
- 
   justify-content: center;
   display: block;
-  transform: translateX(20%);
- 
+  transform: translateX(-0%);
 }
-.show h2{
+.show h2 {
   display: flex;
+  margin: 10px;
   text-align: center;
 }
 
 .empty-message {
-
   text-align: center;
   font-size: 1.2rem;
   color: rgb(7, 7, 7);
   margin-top: 20px;
-  width:80%
+  width: 80%;
 }
 
 .binAll {
-
   width: 1.6rem;
   height: 1.6rem;
- 
-  
 }
 
 .close-popup {
-position: absolute;
-top:5px;
-left:10px;
-  
+  position: absolute;
+  top: 5px;
+  left: 10px;
   border: none;
   font-size: 24px;
   cursor: pointer;
-color:none;
+  color: none;
   background-color: none;
+}
+.favContainer {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnBin {
+
+  border: 4px solid black;
+  padding: 5%;
+  border-radius: 50%;
+  display: none;
+  background-color: rgb(241, 135, 198);
+}
+
+.favTitleList{
+  display: flex;
+ align-items: center;
+
+  font-family: "Patua One", serif;
+  font-weight: 600;
+  font-style:oblique;
+}
+.fabList {
+  margin-top: 5%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap:5px;
+  flex-wrap: wrap;
+
+  
 
 }
-.favContainer{
-  margin-top:10%;}
-
- .btnBin{
-  margin-left:30%;
-  border:2px solid black;
-  padding:5%;
-  border-radius:50%;
-  display:none;
- }
- 
-
-.favContainer h2{
-  padding-left: 20%;
-}
-.fabList{
-  margin-top:10%;
-  padding-left: 12%;
-}
-.fabList img{
-  height: 100%;
-  margin-top:5%
+.imgFav {
+  width: 100%;
+  margin-top: 5%;
 }
 
 .favBox {
@@ -298,22 +312,30 @@ color:none;
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 70%;
+  width: 90%;
+  height: max-content;
 
+
+  
+}
+.favBox h2{
+    font-style:none
 }
 
 .delete-btn {
   position: absolute;
   z-index: 100;
   top: 0px;
-  right: 3px;
-  margin:3px;
+  right: -3px;
+  margin: 3px;
+ 
+  border: 2px solid  rgb(230, 81, 81);
 
   background: rgb(255, 255, 255);
   border-radius: 50%;
-  padding:5px;
-  font-size: 3em;
-  color: red;
+  padding: 5px;
+  font-size: 3.5em;
+  color: rgb(229, 60, 60);
   cursor: pointer;
 }
 
@@ -321,17 +343,16 @@ color:none;
   color: rgb(240, 218, 218);
   background-color: rgb(255, 48, 48);
 }
-.favorites-icon{
-  position:fixed;
-  top:130px;
+.favorites-icon {
+  position: fixed;
+  top: 140px;
   right: -9px;
-  border:2px solid  rgb(255, 17, 57);
+  border: 2px solid rgb(255, 17, 57);
   border-radius: 50%;
   height: max-content;
   width: max-content;
   font-size: 2.5rem;
   padding: 0.1em;
   background-color: #f9d8f2;
-  z-index: 200,
-  
+  z-index: 200;
 }

@@ -94,7 +94,7 @@ function renderFavorite(favSerie) {
                 : 'https://via.placeholder.com/70x90/ffffff/666666/?text=TV'
             }" alt="${favSerie.show.name}" title="${favSerie.show.name}" />
             <h2>${favSerie.show.name}</h2>
-            <button class="delete-btn">X</button>
+            <button class="delete-btn" title='Eliminar'>X</button>
         </article>
     `;
 }
@@ -160,9 +160,17 @@ function handleClickDeleteOne(event) {
       favoritesList.splice(indexFav, 1);
       renderFavoritesList();
       localStorage.setItem('favorites', JSON.stringify(favoritesList));
+      
+      // Encontrar el elemento correspondiente en la lista de resultados y actualizar sus clases
+      const serieElement = document.getElementById(idFavClicked);
+      if (serieElement) {
+        serieElement.classList.remove('mark');
+        serieElement.classList.add('minibox');
+      }
     }
   }
 }
+
 
 favorites.addEventListener('click', handleClickDeleteOne);
 function handleClickResetBtn(event) {

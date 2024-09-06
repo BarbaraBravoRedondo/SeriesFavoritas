@@ -1,0 +1,22 @@
+{
+  "name": "seriesfavoritas",
+  "version": "1.0.0",
+  "description": "modulo-2-evaluacion-final-BarbaraBravoRedondo created by GitHub Classroom # TV Series Finder and Favorites",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarbaraBravoRedondo/SeriesFavoritas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarbaraBravoRedondo/SeriesFavoritas/issues"
+  },
+  "homepage": "https://github.com/BarbaraBravoRedondo/SeriesFavoritas#readme",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

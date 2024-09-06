@@ -41,6 +41,7 @@ header {
   box-shadow: 0 0 15px rgba(249, 245, 249, 0.9);
   animation: border-glow 1s infinite alternate;
   border-radius: 7px;
+
 }
 
 header p {
@@ -56,7 +57,7 @@ header p {
   @media (min-width: 1024px) {
     margin-top: 2%;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 1%;
   }
 }
@@ -86,7 +87,7 @@ h1 {
     0 0 180px rgb(6, 7, 7);
   margin-top: 20px;
   @media (min-width: 1024px) {
-    font-size: 8rem;
+    font-size: 5rem;
     margin-top: 4%;
   }
 }
@@ -143,7 +144,7 @@ form {
 
 }
 .container {
-  margin-top: 5px;
+  margin-top: 6px;
   display: flex;
   flex-wrap: wrap;
   font-size: 10px;
@@ -155,7 +156,7 @@ form {
   color: white;  margin: auto auto 3%;
   @media (min-width: 1024px) {
     gap: 40px;
-    margin-top: 60px;
+    margin-top: 100px;
   }
 }
 .mark .minibox,
@@ -164,7 +165,7 @@ h2 {
   padding: 5px;
 
   @media (min-width: 1024px) {
-    font-size: 2.7rem;
+    font-size: 2rem;
   }
 }
 
@@ -187,9 +188,9 @@ h2 {
   height: 200px;
 
   @media (min-width: 1024px) {
-    width: 400px;
-    height: 430px;
-    font-size: 5em;
+    width: 230px;
+    height: 380px;
+    font-size: 1em;
   }
 }
 
@@ -203,7 +204,7 @@ h2 {
   transform: scale(1.15);
   border: 8px solid  rgb(27, 17, 17);;
   @media (min-width: 1024px) {
-    width: 400px;
+    width: 300px;
     height: max-content;
     margin: 30px;
   }
@@ -230,13 +231,13 @@ h2 {
   };
 
   @media (min-width: 1024px) {
-    width: 400px;
+    
     font-size: 800;
-    width: 400px;
-    height: 430px;
+    width: 280px;
+    height: 380px;
     gap: 20px;
-    gap: 10px; 
-     border: solid 20px rgb(255, 93, 93);
+ 
+     border: solid 13px rgb(255, 93, 93);
   }
 }
 .mark:hover {
@@ -250,8 +251,8 @@ h2 {
   width: 100px;
   height: 110px;
   @media (min-width: 1024px) {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 210px;
   }
 }
 
@@ -389,14 +390,13 @@ h2 {
     flex-direction: row;
     display: flex;
     justify-content: center;
-    width: 90%;
-    gap: 20px;
+    flex:wrap;
+    width: 95%;
+    gap: 10px;
   }
   @media (min-width: 1024px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 40px;
+
+    gap: 10px;
   }
 }
 .imgFav {
@@ -408,8 +408,8 @@ h2 {
     height: 210px;
   }
   @media (min-width: 1024px) {
-    width: 200px;
-    height: 280px;
+    width: 180px;
+    height: 230px;
     margin-top: 22px;
     
   }
@@ -431,11 +431,13 @@ h2 {
  
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 200px;
-    height: 310px;
+    height: 280px;
+    border:solid 10px rgb(255, 93, 93);
   }
   @media (min-width: 1024px) {
-    width: 360px;
-    height: 480px;
+    width: 250px;
+    height: 420px;
+    border:solid 15px rgb(255, 93, 93);
   }
 }
 .favBox:hover{
@@ -443,7 +445,7 @@ h2 {
 }
 .favBox h2 {
   font-style: none;
-  font-size: 1.6em;
+  font-size: 1.4em;
   text-align: center;
 }
 
@@ -486,6 +488,7 @@ h2 {
   animation: heartbeat 3s infinite;  
    animation: border-glow 1s infinite alternate;
   @media (min-width: 768px) and (max-width: 1024px) {
+    border: 4px solid rgb(255, 93, 93);
     font-size: 2.7rem;
     right: -8px;
     top: 23%;

@@ -91,7 +91,7 @@ function renderFavorite(favSerie) {
             <img class="imgFav" src="${
               favSerie.show.image
                 ? favSerie.show.image.medium
-                : 'https://via.placeholder.com/70x90/ffffff/666666/?text=TV'
+                : 'images/Error404.png'
             }" alt="${favSerie.show.name}" title="${favSerie.show.name}" />
             <h2>${favSerie.show.name}</h2>
             <button class="delete-btn" title='Eliminar'>X</button>

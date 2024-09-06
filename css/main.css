@@ -18,12 +18,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
- 
-
 }
 
 header {
-  position: relative; font-family: 'Bebas Neue', sans-serif;
+  position: relative;
+  font-family: 'Bebas Neue', sans-serif;
 
   font-size: 1.5rem;
   letter-spacing: 3px;
@@ -41,17 +40,24 @@ header {
   box-shadow: 0 0 15px rgba(249, 245, 249, 0.9);
   animation: border-glow 1s infinite alternate;
   border-radius: 7px;
+
 }
 
 header p {
   background: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
   margin: 3px 20px 0px 20px;
-  padding: 1%;
+  padding: 2%;
   line-height: 20px;
-  font-family: "Patua One", serif;
+  font-family: 'Patua One', serif;
   font-weight: 400;
   font-style: normal;
+  @media (min-width: 1024px) {
+   margin-top: 2%;
+   font-weight: 700;
+   font-size: 2em;
+   padding:1%
+  }
 }
 
 @keyframes border-glow {
@@ -63,13 +69,13 @@ header p {
   }
 }
 
-.favorites-icon {
+/* .favorites-icon {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 40px;
   cursor: pointer;
-}
+} */
 
 main {
   height: max-content;
@@ -87,6 +93,10 @@ h1 {
     0 0 100px rgb(10, 12, 13), 0 0 140px rgb(244, 157, 231),
     0 0 180px rgb(6, 7, 7);
   margin-top: 20px;
+    @media (min-width: 1024px) {
+    font-size: 8rem;
+  margin-top: 4%;
+  }
 }
 
 form {
@@ -105,16 +115,19 @@ form {
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 20px;
+  @media (min-width: 1024px){
+    height:4rem;
+    width: 30vw;
+    border-radius: 30px;
+  }
 }
 
 .btn {
   font-size: 0.8rem;
-  /* border-radius: 50px; */
   background-color: white;
   border: none;
   padding: 5px;
   font-family: 'Pacifico', cursive;
-  /* border: rgb(237, 151, 194) solid 2px; */
   cursor: pointer;
   width: max-content;
   transform: translateX(-150%);
@@ -127,6 +140,9 @@ form {
 
 .loupe {
   width: 18px;
+  @media (min-width: 1024px){
+    width: 40px;;
+  }
 }
 .bigContainer {
   width: 100vw;
@@ -134,7 +150,6 @@ form {
   justify-content: center;
 }
 .container {
-
   margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -145,25 +160,29 @@ form {
   justify-content: center;
   width: 97vw;
   color: white;
-  
 }
 .mark h2 {
   font-size: large;
-  padding: 5px;
+  padding: 5px;  
 }
 .minibox h2 {
   font-size: large;
   padding: 5px;
-}
-.mark,
-.minibox {  font-family: "Patua One", serif;
-  font-weight: 600;
-  
-  overflow: hidden;
+  @media (min-width: 1024px) {  font-size: 3rem;
 
+  }
+
+}
+
+.minibox {  
+  z-index: 10;
+  background-color: rgb(246, 204, 246, 0.4);
+  color: rgb(9, 8, 8, 0.9);
+  font-family: 'Patua One', serif;
+  font-weight: 600;
+  overflow: hidden;
   text-overflow: clip;
-  background-color: rgb(244, 211, 247);
-  color: rgba(221, 53, 143, 0.904);
+ 
   width: 120px;
   padding: 20px;
   display: flex;
@@ -171,41 +190,63 @@ form {
   justify-content: flex-start;
   align-items: center;
   text-align: inherit;
-  font-size: 0.5rem;
+
   gap: 10px;
   height: 200px;
+  @media (min-width: 1024px) {
+    width: 400px;
+    height: 430px;
+    font-size: 5em;
+  }
 }
 
-.minibox {
-  z-index: 10;
-  background-color: rgb(246, 204, 246, 0.4);
-  color: rgb(9, 8, 8, 0.9);
-}
 .minibox:hover {
-  background-color: rgba(50, 49, 49, 0.6);
-  color: azure;
+  background-color: rgba(247, 235, 235, 0.8);
+  
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   margin: 9px;
+
   overflow: visible;
   height: max-content;
   width: 160px;
   transform: scale(1.15);
+  @media (min-width: 1024px) {
+  width: 400px;
+  height: 200px;
+  margin:30px;
+  gap:10px;
+
+  }
 }
-/* .mark:hover{
+.mark{
+  font-family: 'Patua One', serif;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: clip; 
+  background-color: rgb(0, 0, 0);
+width: 120px;;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: inherit;
+  padding: 20px;
+  @media (min-width: 1024px) {
+    width: 400px;
+    margin:30px;
+    gap:10px;}
+}
 
-
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-  margin:10px;
-  overflow: visible;
-  height: max-content; 
-
-} */
 
 .imgSrc {
   border: solid 1px black;
   width: 100px;
   height: 110px;
+  @media (min-width: 1024px) {
+    width: 300px;
+    height: 330px;
+  }
 }
 
 .favorites-popup {
@@ -215,8 +256,8 @@ form {
   right: 0;
   width: 100vw;
   height: 100%;
-  background: rgba(250, 250, 250, 0.9);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(250, 250, 250, 0.91);
+  box-shadow: 0 0 10px rgba(228, 183, 183);
   overflow-y: auto;
   padding: 20px;
   z-index: 1000;
@@ -237,14 +278,19 @@ form {
   display: flex;
   margin: 10px;
   text-align: center;
+  font-size: 2em;
 }
 
 .empty-message {
   text-align: center;
-  font-size: 1.2rem;
-  color: rgb(7, 7, 7);
-  margin-top: 20px;
+  font-size: 1.8em;
+  font-style: unset;
+  color: rgb(7, 7, 7, 0.8);
+  margin-top: 20%;
   width: 80%;
+  font-family: 'Gruppo', sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .binAll {
@@ -271,7 +317,6 @@ form {
 }
 
 .btnBin {
-
   border: 4px solid black;
   padding: 5%;
   border-radius: 50%;
@@ -279,63 +324,66 @@ form {
   background-color: rgb(241, 135, 198);
 }
 
-.favTitleList{
+.favTitleList {
   display: flex;
- align-items: center;
-
-  font-family: "Patua One", serif;
-  font-weight: 600;
-  font-style:oblique;
-}
-.fabList {
-  margin-top: 5%;
-  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap:5px;
+  justify-content: center;
   flex-wrap: wrap;
+  border-bottom: solid 1px black;
+  width: 80%;
 
-  
-
+  font-family: 'Patua One', serif;
+  font-weight: 600;
+  font-style: oblique;
+}
+.fabList {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 .imgFav {
   width: 100%;
-  margin-top: 5%;
+  margin-top: 5px;
 }
 
 .favBox {
   position: relative;
   padding: 10px;
-  border: 1px solid #ddd;
+
   margin-bottom: 10px;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 90%;
+  width: 80%;
   height: max-content;
-
-
-  
+  background-color: rgb(238, 177, 207);
+  box-shadow: 0 0 20px rgba(74, 60, 60, 0.5);
+  color: rgb(11, 10, 10);
 }
-.favBox h2{
-    font-style:none
+.favBox h2 {
+  font-style: none;
+  font-size: 3em;
 }
 
 .delete-btn {
   position: absolute;
   z-index: 100;
-  top: 0px;
-  right: -3px;
-  margin: 3px;
- 
-  border: 2px solid  rgb(230, 81, 81);
-
-  background: rgb(255, 255, 255);
+  top: -2px;
+  right: -2px;
+  margin: 4px;
+  border: 2px solid rgb(249, 249, 249);
+  background: rgb(9, 5, 5);
   border-radius: 50%;
   padding: 5px;
-  font-size: 3.5em;
-  color: rgb(229, 60, 60);
+  font-size: 2rem;
+  color: rgb(242, 234, 240);
   cursor: pointer;
 }
 
@@ -355,4 +403,19 @@ form {
   padding: 0.1em;
   background-color: #f9d8f2;
   z-index: 200;
+  animation: heartbeat 3s infinite; 
+  @media (min-width: 1024px){
+    font-size: 3rem;
+    position: absolute;
+    left: 2%;
+    top:65%;
+  }
+}
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); 
+  }
 }

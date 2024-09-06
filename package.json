@@ -4,7 +4,7 @@
   "description": "modulo-2-evaluacion-final-BarbaraBravoRedondo created by GitHub Classroom # TV Series Finder and Favorites",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",

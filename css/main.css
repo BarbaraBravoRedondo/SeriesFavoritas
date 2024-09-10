@@ -386,20 +386,20 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* Añade flex-wrap aquí para que también funcione en mobile */
   width: 90%;
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* Asegura que los items envuelvan correctamente */
   width: 95%;
   gap: 10px;
 }
 
 @media (min-width: 1024px) {
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* Mantén flex-wrap para desktop */
   justify-content: center;
   gap: 20px;
 }
